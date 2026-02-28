@@ -12,25 +12,33 @@ interface ProjectProps extends React.HTMLAttributes<HTMLDivElement> {
     href?: string; // Link to project page
     githubHref?: string;
     itchHref?: string;
+    steamHref?: string;
     backgroundPositionY?: string;
-
+    children?: ReactNode;
     blogurl?: string;
+    highighted?: boolean;
 }
 
-export const Project: React.FC<ProjectProps> = ({ name, tagline, tags, bgImage, year, backgroundPositionY, children, blogurl, ...props }) => {
+export const Project: React.FC<ProjectProps> = ({ name, tagline, tags, bgImage, year, backgroundPositionY, children, blogurl, highighted, ...props }) => {
 
 
-    const bgClass = `h-32 w-full overflow-hidden bg-bottom`;
+    const hHeight = highighted ? 'h-64' : 'h-32';
+
+    const bgClass = `${hHeight} w-full overflow-hidden bg-bottom`;
     const backgroundImage = bgImage ? `url('/images/projects/${bgImage}')` : 'url("/images/backgrounds/header_dark.png")';
 
     // Link for the Project Title, if applicable
-    const link = props.href || props.githubHref || props.itchHref;
-
+    const link = props.href || props.githubHref || props.itchHref || props.steamHref;
 
 
     return (
         // <div className="flex overflow-hidden relative items-start justify-start flex flex-col gap-y-2 w-full border border-neutral-700 rounded-lg shadow-lg bg-neutral-900 ">
-        <div className="flex flex-col overflow-hidden relative gap-y-2 w-full border border-neutral-700 rounded-lg shadow-lg bg-neutral-900 ">
+        <div 
+            className="flex flex-col overflow-hidden relative gap-y-2 w-full border border-neutral-700 rounded-lg bg-neutral-900"
+            style={highighted ? {
+                boxShadow: '0 10px 25px -5px rgba(255, 223, 0, 0.4), 0 10px 25px -5px rgba(147, 51, 234, 0.4), 0 10px 25px -5px rgba(239, 68, 68, 0.4), 0 10px 25px -5px rgba(34, 197, 94, 0.4)'
+            } : { boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)' }}
+        >
             <div className={bgClass} style={{ backgroundImage, backgroundSize: 'cover', backgroundPositionY }}></div>
 
             <div className="absolute top-1 right-1 flex flex-row gap-x-1">
@@ -45,6 +53,16 @@ export const Project: React.FC<ProjectProps> = ({ name, tagline, tags, bgImage, 
                                 className="w-7 h-7"
                             >
                                 <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.113.793-.263.793-.587 0-.287-.012-1.237-.018-2.243-3.338.725-4.042-1.613-4.042-1.613-.546-1.387-1.333-1.755-1.333-1.755-1.09-.744.082-.729.082-.729 1.205.087 1.84 1.237 1.84 1.237 1.07 1.832 2.807 1.302 3.492.995.107-.775.42-1.302.763-1.602-2.665-.3-5.467-1.332-5.467-5.93 0-1.31.467-2.382 1.237-3.222-.123-.303-.536-1.523.117-3.176 0 0 1.01-.323 3.3 1.23a11.52 11.52 0 013.003-.403c1.02.005 2.047.137 3.003.403 2.29-1.553 3.3-1.23 3.3-1.23.653 1.653.24 2.873.117 3.176.77.84 1.237 1.912 1.237 3.222 0 4.61-2.807 5.625-5.48 5.92.432.372.817 1.102.817 2.222 0 1.606-.015 2.902-.015 3.293 0 .323.192.705.8.587C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" />
+                            </svg>
+                        </SocialIcon>
+                    </div>
+                }{
+                    props.steamHref &&
+                    <div className="p-1 bg-white/10 hover:bg-white/20 active:bg-black/20 shadow-xl backdrop-blur-[10px] rounded-full">
+                        <SocialIcon website={props.steamHref}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-steam" viewBox="0 0 16 16" className="w-7 h-7">
+                                <path d="M.329 10.333A8.01 8.01 0 0 0 7.99 16C12.414 16 16 12.418 16 8s-3.586-8-8.009-8A8.006 8.006 0 0 0 0 7.468l.003.006 4.304 1.769A2.2 2.2 0 0 1 5.62 8.88l1.96-2.844-.001-.04a3.046 3.046 0 0 1 3.042-3.043 3.046 3.046 0 0 1 3.042 3.043 3.047 3.047 0 0 1-3.111 3.044l-2.804 2a2.223 2.223 0 0 1-3.075 2.11 2.22 2.22 0 0 1-1.312-1.568L.33 10.333Z" />
+                                <path d="M4.868 12.683a1.715 1.715 0 0 0 1.318-3.165 1.7 1.7 0 0 0-1.263-.02l1.023.424a1.261 1.261 0 1 1-.97 2.33l-.99-.41a1.7 1.7 0 0 0 .882.84Zm3.726-6.687a2.03 2.03 0 0 0 2.027 2.029 2.03 2.03 0 0 0 2.027-2.029 2.03 2.03 0 0 0-2.027-2.027 2.03 2.03 0 0 0-2.027 2.027m2.03-1.527a1.524 1.524 0 1 1-.002 3.048 1.524 1.524 0 0 1 .002-3.048" />
                             </svg>
                         </SocialIcon>
                     </div>

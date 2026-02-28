@@ -11,22 +11,12 @@ export const Projects = () => {
                         name={"Soulflame"}
                         tagline={"Solo-developed Action Adventure Game"}
                         tags={['GML']}
-                        year={2025}
-                        bgImage={'soulflame_new_bkg.png'}
-                        itchHref="https://alexeckardt.itch.io/soulflame"
+                        year={2027}
+                        bgImage={'soulflame.png'}
+                        steamHref="https://store.steampowered.com/app/2303640/Soulflame/"
                         href="https://soulflamegame.com"
                         backgroundPositionY='30%'
-                    >
-                    </Project>
-
-                    <Project
-                        name={"MeetingBot"}
-                        tagline={"Self-hosting Online meeting recording API"}
-                        tags={['Docker', 'AWS', 'Terraform', 'Pupeteer']}
-                        year={2025}
-                        githubHref={'https://github.com/meetingbot/meetingbot'}
-                        href={'https://meetingbot.tech'}
-                        blogurl="/blog/meetingbot"
+                        tall={true}
                     >
                     </Project>
 
@@ -41,28 +31,28 @@ export const Projects = () => {
                         blogurl="/blog/pinball-pioneer"
                     >
                     </Project>
+
+                    <Project
+                        name={"Titan Quest (Prototype)"}
+                        tagline={"Educational project for NASA Spaceapps Hackathon. No relation to the ARPG of the same name."}
+                        tags={['GML']}
+                        year={2023}
+                        bgImage={'spaceapps_bkg.png'}
+                        backgroundPositionY='50%'
+                    >
+                    </Project>
+                    
                     <Project
                         name={"Soulflame (Alpha)"}
                         tagline={"Solo-developed Action Adventure Game"}
                         tags={['GML']}
-                        year={2023}
+                        year={2021}
                         bgImage={'soulflame_highres.png'}
                         itchHref="https://alexeckardt.itch.io/soulflamealpha"
                         backgroundPositionY='50%'
                     >
                     </Project>
 
-                    <Project
-                        name='GO Transit Viewer'
-                        tagline='A simple web app to view GO Transit schedules' tags={['React', 'Next.js', 'TypeScript']}
-                        year={2023}
-                        bgImage={'gotransit_highres.png'}
-                        backgroundPositionY="70%"
-                        githubHref="https://github.com/alexeckardt/GO-Transit-Visualizer"
-                        href="https://alexeckardt.github.io/GO-Transit-Visualizer/"
-                        blogurl="/blog/go-transit-viewer"
-                    >
-                    </Project >
                 </div>
             </div >
         </div >
