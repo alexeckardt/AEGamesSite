@@ -12,10 +12,10 @@
     "@netlify/plugin-nextjs": "^5.11.3",
     "@types/prismjs": "^1.26.5",
     "lucide-react": "^0.544.0",
-    "next": "15.3.3",
+    "next": "^14.2.35",
     "prismjs": "^1.30.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-router-dom": "^7.9.1"
   },
   "devDependencies": {
@@ -25,6 +25,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "eslint-config-next": "^14.2.35",
     "tailwindcss": "^4",
     "typescript": "5.9.3"
   }
