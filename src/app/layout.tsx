@@ -14,8 +14,47 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Eckardt",
-  description: "A Portfolio Website for Alexander Eckardt",
+  metadataBase: new URL('https://alexeckardtgames.com'),
+  title: "Alex Eckardt Games | Indie Game Developer Portfolio",
+  description: "Explore the game development portfolio of Alex Eckardt, an indie game developer from Waterloo, Ontario. Featuring Soulflame and other game projects.",
+  keywords: ['Alex Eckardt', 'indie game developer', 'game development', 'Soulflame', 'Waterloo Ontario', 'Alex Eckardt Games'],
+  authors: [{ name: 'Alex Eckardt' }],
+  creator: 'Alex Eckardt',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://alexeckardtgames.com',
+    siteName: 'Alex Eckardt Games',
+    title: 'Alex Eckardt Games | Indie Game Developer Portfolio',
+    description: 'Explore the game development portfolio of Alex Eckardt, an indie game developer from Waterloo, Ontario. Featuring Soulflame and other game projects.',
+    images: [
+      {
+        url: 'https://alexeckardtgames.com/dev-logo.png',
+        width: 200,
+        height: 210,
+        alt: 'Alex Eckardt Games Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Alex Eckardt Games | Indie Game Developer',
+    description: 'Portfolio of indie game developer Alex Eckardt. Games include Soulflame and more.',
+  },
+  alternates: {
+    canonical: 'https://alexeckardtgames.com',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
