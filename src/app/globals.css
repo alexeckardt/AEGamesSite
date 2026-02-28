@@ -52,7 +52,7 @@ body {
 }
 
 .main>h2 {
-  @apply text-lg font-sans font-medium mt-8 mb-1
+  @apply text-lg font-sans font-medium mt-8 mb-5
 }
 
 p > a {
@@ -71,76 +71,26 @@ b {
   @apply text-black font-medium dark:text-white;
 }
 
-.bloglink {
-  @apply no-underline flex flex-col justify-center items-start p-3 w-full min-h-20 rounded-lg overflow-hidden border mb-2 bg-gray-50 hover:bg-gray-100 border-gray-200 dark:bg-gray-900 dark:hover:bg-gray-800 dark:active:bg-gray-700 dark:border-gray-700
-}
-
 .youtube-video {
   @apply flex items-center justify-center overflow-hidden max-w-full h-50 rounded-lg overflow-hidden border border-gray-200 mb-2
 }
 
-.blog {
-  @apply font-sans w-full mb-12
+/* Gradient shadow for highlighted project cards */
+.project-highlighted {
+  position: relative;
+  overflow: visible;
+  z-index: 10;
 }
 
-.blog>h1 {
-  @apply font-sans text-3xl font-semibold mt-8 mb-2
-}
-
-.blog>h2 {
-  @apply font-sans text-xl font-semibold mt-2 mb-1 text-neutral-700 dark:text-neutral-300
-}
-
-.blog>h3 {
-  @apply font-sans text-lg font-semibold -mb-1
-}
-
-.blog>h4 {
-  @apply font-sans text-lg -mb-1
-}
-
-.blog>p {
-  @apply font-sans mb-5 text-base/6 text-gray-600 dark:text-gray-400
-}
-
-.blog > .codearea {
-  @apply min-h-12 border border-gray-200 w-full bg-gray-50 rounded-md px-2 py-5 mb-4
-}
-
-/* Modern Code Block Styling */
-.codeblock-container {
-  @apply w-full mb-6 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden bg-white dark:bg-gray-900;
-}
-
-.codeblock-header {
-  @apply flex items-center justify-between px-4 py-2 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700;
-}
-
-.codeblock-filename {
-  @apply text-sm font-mono text-gray-600 dark:text-gray-400;
-}
-
-.codeblock-copy-btn {
-  @apply p-1.5 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300;
-}
-
-.codeblock-content {
-  @apply p-4 overflow-x-auto; /* smaller default */
-}
-
-.codeblock-content code {
-  @apply font-mono leading-relaxed; /* inherits font-size from pre */
-}
-
-/* Pixel art utility: keeps edges crisp when scaled */
-.pixelated {
-  image-rendering: pixelated;
-  image-rendering: crisp-edges; /* fallback */
-  -ms-interpolation-mode: nearest-neighbor; /* old IE */
-}
-
-/* Prism themes: light by default, Tokyo Night in dark mode */
-@import "prismjs/themes/prism.css";
-@media (prefers-color-scheme: dark) {
-  @import "./prism-tokyo-night.css";
+.project-highlighted::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  right: -7px;
+  bottom: -7px;
+  border-radius: 16px;
+  background: linear-gradient(123deg, #ffd500aa -20%, #9533eaaa 43%, #ef444455 126%);
+  filter: blur(10px);
+  z-index: -10;
 }

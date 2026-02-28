@@ -13,10 +13,10 @@ export const Projects = () => {
                         tags={['GML']}
                         year={2027}
                         bgImage={'soulflame.png'}
-                        steamHref="https://store.steampowered.com/app/2303640/Soulflame/"
+                        steamHref="https://store.steampowered.com/app/4177660/Soulflame/"
                         href="https://soulflamegame.com"
                         backgroundPositionY='30%'
-                        tall={true}
+                        highlighted={true}
                     >
                     </Project>
 
