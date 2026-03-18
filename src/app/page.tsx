@@ -11,7 +11,7 @@ import { OnwardLink } from "@/components/OnwardLink";
 
 export const metadata: Metadata = {
   title: "Alex Eckardt Games | Indie Game Developer Portfolio",
-  description: "Discover Alex Eckardt's indie game development portfolio, featuring award-winning games like Soulflame. Learn about projects, blog posts, and game development from Waterloo, Ontario.",
+  description: "Discover Alex Eckardt's indie game development portfolio, featuring games like Soulflame. Learn about projects, blog posts, and game development from Waterloo, Ontario.",
 };
 
 export default async function Home() {
@@ -80,7 +80,7 @@ export default async function Home() {
 
             <div className="mb-2 gap-5 flex flex-col font-sans text-neutral-600 dark:text-neutral-100 text-base/6 font-size-[1rem]">
               <p><strong>Alex Eckardt Games</strong> is an indie game development studio based in Waterloo, Ontario, dedicated to creating unique and engaging games.</p>
-              <p>I'm an indie game developer currently working on <a className="inline-flex items-center gap-1 mr-1 font-semibold hover:underline" target="_blank" rel="noopener noreferrer" href={"https://soulflamegame.com"}>Soulflame <InlineOutboundLink /></a>, an award-winning action RPG.</p>
+              <p>I'm an indie game developer currently working on <a className="inline-flex items-center gap-1 mr-1 font-semibold hover:underline" target="_blank" rel="noopener noreferrer" href={"https://soulflamegame.com"}>Soulflame <InlineOutboundLink /></a>, an action RPG.</p>
             </div>
 
             <h2 className="text-2xl font-bold mt-8 mb-4">Game Projects</h2>
