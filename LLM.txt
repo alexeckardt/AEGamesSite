@@ -1,0 +1,78 @@
+Alex Eckardt Games - LLM Context File
+Last updated: 2026-04-07
+Primary domain: https://alexeckardtgames.com
+
+1) Site purpose
+This website is the portfolio and studio site for Alex Eckardt Games, an indie game development brand.
+It presents Alex Eckardt's game projects, current focus, and outbound links for blog content and contact.
+
+2) Owner and identity
+Name: Alex Eckardt
+Brand: Alex Eckardt Games
+Role: Indie Game Developer
+Location: Waterloo, Ontario
+Primary project in progress: Soulflame (action adventure RPG)
+
+3) Core homepage messaging
+- Alex Eckardt Games is an indie game development studio based in Waterloo, Ontario.
+- Alex is currently working on Soulflame.
+- The home page emphasizes game projects, articles/blog content, and contact.
+
+4) Key links and destinations
+Primary site: https://alexeckardtgames.com
+Soulflame site: https://soulflamegame.com
+Soulflame Steam page: https://store.steampowered.com/app/4177660/Soulflame/
+Blog index: https://alexeckardt.ca/blog
+Contact target used on site: https://soulflamegame.com/press#contact
+Twitter/X: https://twitter.com/alexeckardt
+GitHub: https://github.com/alexeckardt
+
+5) Main game projects shown
+- Soulflame (2027): Solo-developed action adventure game.
+  Links: https://soulflamegame.com and Steam page above.
+- Pinball Pioneer (2024): Top 10 game of GMTK 2023 game jam.
+  Link: https://alexeckardt.itch.io/pinball-pioneer
+  Related blog path in code: /blog/pinball-pioneer (hosted on alexeckardt.ca)
+- Titan Quest (Prototype) (2023): Educational NASA Space Apps related prototype.
+- Soulflame (Alpha) (2021): Earlier alpha version.
+  Link: https://alexeckardt.itch.io/soulflamealpha
+
+6) Additional experiments listed in codebase
+- Obesity Risk Model (2024): PyTorch / Scikit-learn ML project.
+- Chess Opening Explorer (2023): GML + Stockfish.
+- Pixel Art Tile-Set Extrapolator (2023): Python/Bash tool.
+- TitanQuest Game (2023): NASA Space Apps submission.
+- iOS Speedrun Timer (2022): SwiftUI app.
+- Rougelike Dungeon C# Game (2023): MonoGame project.
+- Portfolio Website (2025): Source code project.
+
+7) Structured data and SEO intent
+The site includes Person schema JSON-LD describing Alex Eckardt and linking social profiles.
+Metadata emphasizes these keywords/topics:
+- Indie game developer
+- Alex Eckardt
+- Soulflame
+- Waterloo, Ontario
+Open Graph and Twitter metadata are configured for portfolio discoverability.
+
+8) Sitemap-related URLs generated in app
+- https://alexeckardtgames.com
+- https://alexeckardt.ca/blog
+- https://soulflamegame.com
+- https://soulflamegame.com/press
+
+9) Tech stack
+Framework: Next.js 14 (App Router)
+Language: TypeScript + React 18
+Styling: Tailwind CSS v4 + custom global CSS
+Deployment-related dependency present: @netlify/plugin-nextjs
+Other notable deps: lucide-react, prismjs, sharp
+
+10) Brand assets and visuals in public folder
+- /dev-logo.png
+- /favicon.png
+- /favicon.svg
+- Background and project imagery under /images/
+
+11) High-confidence summary for LLM consumers
+Alex Eckardt Games is the personal studio/portfolio web presence of indie developer Alex Eckardt. The site is centered on Soulflame and related game development work, with supporting links to a blog and contact page. It is a Next.js + TypeScript project with SEO metadata, JSON-LD person schema, and curated project cards for games and experiments.
