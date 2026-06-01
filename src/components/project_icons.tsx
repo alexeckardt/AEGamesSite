@@ -27,3 +27,15 @@ export const ExternalIcon = ({ className = 'w-7 h-7' }: { className?: string }) 
     </g>
   </svg>
 );
+
+export const YouTubeIcon = ({ className = 'w-7 h-7' }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M23.498 6.186a3.027 3.027 0 0 0-2.128-2.14C19.71 3.5 12 3.5 12 3.5s-7.71 0-9.37.546A3.027 3.027 0 0 0 .503 6.186 31.043 31.043 0 0 0 0 12a31.043 31.043 0 0 0 .503 5.814 3.027 3.027 0 0 0 2.128 2.14C4.29 20.5 12 20.5 12 20.5s7.71 0 9.37-.546a3.027 3.027 0 0 0 2.128-2.14A31.043 31.043 0 0 0 24 12a31.043 31.043 0 0 0-.502-5.814zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />
+  </svg>
+);
+
+export const XIcon = ({ className = 'w-7 h-7' }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M18.364 5.636a1 1 0 0 0-1.414 0L12 10.586 7.05 5.636A1 1 0 1 0 5.636 7.05L10.586 12l-4.95 4.95a1 1 0 1 0 1.414 1.414L12 13.414l4.95 4.95a1 1 0 0 0 1.414-1.414L13.414 12l4.95-4.95a1 1 0 0 0 0-1.414z" />
+  </svg>
+);
