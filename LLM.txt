@@ -24,7 +24,7 @@ Soulflame site: https://soulflamegame.com
 Soulflame Steam page: https://store.steampowered.com/app/4177660/Soulflame/
 Blog index: https://alexeckardt.ca/blog
 Contact target used on site: https://soulflamegame.com/press#contact
-Twitter/X: https://twitter.com/alexeckardt
+Twitter/X: https://twitter.com/soulflamegame
 GitHub: https://github.com/alexeckardt
 
 5) Main game projects shown

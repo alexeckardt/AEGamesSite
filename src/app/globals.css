@@ -45,6 +45,31 @@ body {
   color: var(--foreground);
   /* font-family: Arial, Helvetica, sans-serif; */
   font-family: 'Geist Sans', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at top, rgba(128, 22, 249, 0.18), transparent 32%),
+    radial-gradient(circle at 80% 18%, rgba(162, 114, 244, 0.1), transparent 24%),
+    radial-gradient(circle at 18% 32%, rgba(106, 59, 246, 0.08), transparent 22%),
+    var(--background);
+}
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 50% 14%, rgba(249, 22, 22, 0.12), transparent 30%),
+      radial-gradient(circle at 18% 34%, rgba(244, 114, 182, 0.08), transparent 20%),
+      radial-gradient(circle at 82% 28%, rgba(206, 246, 59, 0.07), transparent 18%);
+    filter: blur(20px);
+    z-index: 0;
+  }
+
+body > * {
+  position: relative;
+  z-index: 1;
 }
 
 .main>h1 {
@@ -78,19 +103,139 @@ b {
 /* Gradient shadow for highlighted project cards */
 .project-highlighted {
   position: relative;
-  overflow: visible;
   z-index: 10;
 }
 
-.project-highlighted::before {
+.soulflame-card {
+  position: relative;
+  isolation: isolate;
+  padding: 2px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(8, 8, 8, 0.92), rgba(12, 12, 12, 0.98));
+}
+
+.soulflame-card::before {
   content: '';
   position: absolute;
-  top: -7px;
-  left: -7px;
-  right: -7px;
-  bottom: -7px;
-  border-radius: 16px;
-  background: linear-gradient(123deg, #ffd500aa -20%, #9533eaaa 43%, #ef444455 126%);
-  filter: blur(10px);
-  z-index: -10;
+  inset: -42%;
+  background: conic-gradient(from 0deg, rgba(251, 146, 60, 0.36), rgba(198, 74, 255, 0.88), rgba(59, 130, 246, 0.32), rgba(245, 158, 11, 0.36), rgba(251, 146, 60, 0.86));
+  animation: soulflame-card-spin 14s linear infinite;
+  filter: blur(12px);
+  z-index: 0;
+}
+
+.soulflame-card::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: 13px;
+  background: linear-gradient(180deg, rgba(11, 11, 11, 0.98), rgba(17, 17, 17, 0.96));
+  z-index: 1;
+}
+
+.soulflame-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.homepage-aurora {
+  background:
+    radial-gradient(circle at 50% 20%, rgba(181, 22, 249, 0.14), transparent 28%),
+    radial-gradient(circle at 20% 40%, rgba(169, 85, 247, 0.199), transparent 20%),
+    radial-gradient(circle at 80% 30%, rgba(34, 197, 94, 0.08), transparent 18%);
+  filter: blur(18px);
+  opacity: 0.9;
+}
+
+.soulflame-glow {
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.soulflame-glow::before {
+  content: '';
+  position: absolute;
+  inset: -45%;
+  background: linear-gradient(135deg, rgba(251, 146, 60, 0.5), rgba(244, 114, 182, 0.2), rgba(59, 130, 246, 0.18), rgba(245, 158, 11, 0.45), rgba(251, 146, 60, 0.5));
+  animation: soulflame-glow-spin 18s linear infinite;
+  transform-origin: center;
+  filter: blur(30px);
+  opacity: 0.95;
+  z-index: 0;
+}
+
+.soulflame-glow::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.78), rgba(12, 12, 12, 0.92));
+  z-index: 0;
+}
+
+.soulflame-button {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid rgba(251, 146, 60, 0.4);
+  background: linear-gradient(135deg, rgba(251, 146, 60, 0.18), rgba(239, 68, 68, 0.18), rgba(168, 85, 247, 0.18), rgba(251, 146, 60, 0.18));
+  box-shadow: 0 0 0 1px rgba(251, 146, 60, 0.2), 0 0 30px rgba(251, 146, 60, 0.18);
+}
+
+.soulflame-button::before {
+  content: '';
+  position: absolute;
+  inset: -35%;
+  background: linear-gradient(135deg, rgba(251, 146, 60, 0.55), rgba(244, 114, 182, 0.25), rgba(59, 130, 246, 0.22), rgba(245, 158, 11, 0.5), rgba(251, 146, 60, 0.55));
+  animation: soulflame-button-spin 12s linear infinite;
+  transform-origin: center;
+  filter: blur(18px);
+  opacity: 0.95;
+  z-index: 0;
+}
+
+.soulflame-button::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: rgba(10, 10, 10, 0.72);
+  z-index: 0;
+}
+
+@keyframes soulflame-button-spin {
+  from {
+    transform: rotate(0deg) scale(1.03);
+  }
+
+  to {
+    transform: rotate(360deg) scale(1.03);
+  }
+}
+
+@keyframes soulflame-card-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes soulflame-glow-spin {
+  from {
+    transform: rotate(0deg) scale(1.05);
+  }
+
+  to {
+    transform: rotate(360deg) scale(1.05);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .soulflame-glow::before {
+    animation: none;
+  }
 }
