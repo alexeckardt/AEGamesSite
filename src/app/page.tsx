@@ -26,6 +26,7 @@ export default async function Home() {
     },
     "sameAs": [
       "https://twitter.com/soulflamegame",
+      "https://youtube.com/@pixeqla",
       "https://github.com/alexeckardt",
       "https://soulflamegame.com"
     ]
