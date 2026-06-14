@@ -63,8 +63,8 @@ export default async function Home() {
             <h1 className="text-3xl font-bold mb-6 text-center hidden">Alex Eckardt Games</h1>
 
             <div className="mb-2 gap-5 flex flex-col font-sans text-neutral-600 dark:text-neutral-100 text-base/6 font-size-[1rem]">
-              <p><strong>Alex Eckardt Games</strong> is an indie game development studio based in Waterloo, Ontario dedicated to crafting unique and engaging stories.</p>
-              <p>I'm an indie game developer currently working on <a className="inline-flex items-center gap-1 mr-1 font-semibold hover:underline" target="_blank" rel="noopener noreferrer" href={"https://soulflamegame.com"}>Soulflame <InlineOutboundLink /></a>, an action RPG.</p>
+              <p><strong>Alex Eckardt Games</strong> is a one-man indie game development studio based in Waterloo, Ontario</p>
+              <p>I'm currently working on <a className="inline-flex items-center gap-1 mr-1 font-semibold hover:underline" target="_blank" rel="noopener noreferrer" href={"https://soulflamegame.com"}>Soulflame <InlineOutboundLink /></a>, an action RPG.</p>
             </div>
 
 
